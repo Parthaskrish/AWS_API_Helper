@@ -253,7 +253,7 @@ public class AmazonAPIHelper {
     public String createEC2KeyPair(AmazonEC2 ec2, String keyPairName){
         if(keyPairName==null){
             Log.info("Key Pair Name cannot be null. Hence using randomly generated Key Pair name");
-            keyPairName = "amzKey"+CMUtils.getRandomStr(3);
+            keyPairName = "amzKey"+Utils.getRandomStr(3);
         }
         try{
             CreateKeyPairRequest request = new CreateKeyPairRequest().withKeyName(keyPairName);
